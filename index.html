@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An interactive assistant to help you understand the election process." />
+    <title>CivicGuide | Election Assistant</title>
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- App Container -->
+    <div id="app">
+      <!-- Navbar -->
+      <nav class="glass-nav">
+        <div class="logo">🗳️ CivicGuide</div>
+        <div class="nav-links">
+          <a href="#process">The Process</a>
+          <a href="#assistant">Assistant</a>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <header class="hero">
+        <div class="hero-content">
+          <h1>Navigate Your Election Journey</h1>
+          <p>An interactive, easy-to-follow guide to understand the election process, timelines, and your role as a voter.</p>
+          <a href="#process" class="btn-primary">Start the Journey</a>
+        </div>
+        <div class="hero-bg">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+        </div>
+      </header>
+
+      <!-- Process Timeline Section -->
+      <section id="process" class="timeline-section">
+        <h2>The Election Process</h2>
+        <div class="timeline">
+          <!-- Timeline Items -->
+          <div class="timeline-item" data-step="1">
+            <div class="timeline-icon">1</div>
+            <div class="timeline-content glass-card">
+              <h3>Voter Registration</h3>
+              <p>Ensure you are eligible and registered to vote before the deadline. Check your local state guidelines for exact dates.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item" data-step="2">
+            <div class="timeline-icon">2</div>
+            <div class="timeline-content glass-card">
+              <h3>Researching Candidates</h3>
+              <p>Review the platforms, past records, and policies of the candidates. Look into local, state, and federal races.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-step="3">
+            <div class="timeline-icon">3</div>
+            <div class="timeline-content glass-card">
+              <h3>Election Day</h3>
+              <p>Find your polling place, bring necessary ID, and cast your ballot. Alternatively, mail in your ballot early.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-step="4">
+            <div class="timeline-icon">4</div>
+            <div class="timeline-content glass-card">
+              <h3>Results & Certification</h3>
+              <p>Votes are counted, results are announced, and finally certified by election officials.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Assistant Section -->
+      <section id="assistant" class="assistant-section">
+        <div class="glass-card assistant-container">
+          <div class="assistant-header">
+            <h2>Chat with CivicGuide</h2>
+            <p>Select a topic or ask a common question.</p>
+          </div>
+          <div class="chat-window" id="chat-window">
+            <div class="message assistant-msg">
+              Hello! I am your CivicGuide. What would you like to know about the election process?
+            </div>
+          </div>
+          <div class="assistant-options" id="assistant-options">
+            <button class="btn-outline" data-query="How do I register?">How do I register?</button>
+            <button class="btn-outline" data-query="When is Election Day?">When is Election Day?</button>
+            <button class="btn-outline" data-query="What is a primary?">What is a primary?</button>
+            <button class="btn-outline" data-query="Mail-in voting?">Mail-in voting?</button>
+          </div>
+        </div>
+      </section>
+      
+      <footer>
+        <p>&copy; 2026 CivicGuide. All rights reserved.</p>
+      </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
